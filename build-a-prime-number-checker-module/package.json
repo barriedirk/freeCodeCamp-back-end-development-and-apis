@@ -1,0 +1,13 @@
+{
+  "name": "barriedirk-build-a-prime-number-checker-module",
+  "version": "1.0.0",
+  "description": "This is a practice to get a certificate about backend (freecodecamp), don't use in production application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

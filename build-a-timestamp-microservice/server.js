@@ -13,33 +13,27 @@ app.get("/", (_req, res) => {
 
 // Do not change code above this line
 
-app.get("/api", (req, res) => {
-  const date = new Date();
+const timestampResponse = date => ({
+  unix: date.getTime(),
+  utc: date.toUTCString()
+});
 
-  res.json({ 
-    unix: date.getTime(),
-    utc: date.toUTCString()
-  });
-})
+app.get("/api", (_req, res) => {
+  res.json(timestampResponse(new Date()));
+});
 
-app.get("/api/:date",(req, res) => {
+app.get("/api/:date", (req, res) => {
   const { date } = req.params;
 
-  const parsedDate = /^-?\d+$/.test(date) 
+  const parsedDate = /^-?\d+$/.test(date)
     ? new Date(Number(date))
     : new Date(date);
 
-  console.log(parsedDate, date);  
-
-  if ( isNaN(parsedDate.getTime()) ) {
-    return res.json({ error: "Invalid Date"});
+  if (Number.isNaN(parsedDate.getTime())) {
+    return res.json({ error: "Invalid Date" });
   }
 
-  res.json({
-    unix: parsedDate.getTime(),
-    utc: parsedDate.toUTCString() 
-  });
-
+  res.json(timestampResponse(parsedDate));
 });
 
 // Do not change code below this line

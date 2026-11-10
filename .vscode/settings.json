@@ -18,7 +18,8 @@
     "build-a-personal-profile-app": true,
     "build-a-submission-form": true,
     "build-a-data-sanitizer": true,
-    "build-a-weather-service-api": false
+    "build-a-weather-service-api": true,
+    "build-a-timestamp-microservice": false
   },
   "chat.disableAIFeatures": false,
   "files.autoSave": "off",

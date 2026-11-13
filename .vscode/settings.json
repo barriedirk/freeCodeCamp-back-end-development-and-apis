@@ -19,7 +19,8 @@
     "build-a-submission-form": true,
     "build-a-data-sanitizer": true,
     "build-a-weather-service-api": true,
-    "build-a-timestamp-microservice": false
+    "build-a-timestamp-microservice": true,
+    "build-a-bank-api": false
   },
   "chat.disableAIFeatures": false,
   "files.autoSave": "off",

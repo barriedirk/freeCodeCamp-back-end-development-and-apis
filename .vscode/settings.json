@@ -14,7 +14,8 @@
     "package-lock.json": true,
     "package.json": true,
     "README.md": true,
-    "build-a-resource-monitor": false
+    "build-a-resource-monitor": true,
+    "build-a-chat-app": false
   },
   "chat.disableAIFeatures": false,
   "files.autoSave": "off",

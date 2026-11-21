@@ -15,7 +15,8 @@
     "package.json": true,
     "README.md": true,
     "build-a-resource-monitor": true,
-    "build-a-chat-app": false
+    "build-a-chat-app": true,
+    "build-jwt-protected-routes": false
   },
   "chat.disableAIFeatures": false,
   "files.autoSave": "off",

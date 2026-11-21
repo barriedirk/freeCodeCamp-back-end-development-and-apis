@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>JWT Auth API Tester</title>
+    <link rel="stylesheet" href="/public/styles.css">
+    <script src="/public/app.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <p class="eyebrow">Vanilla JavaScript</p>
+        <h1>JWT Auth API Tester</h1>
+        <p>Register, sign in, rotate tokens, and call protected API routes.</p>
+      </header>
+
+      <section class="panel health-panel" aria-labelledby="health-heading">
+        <div>
+          <h2 id="health-heading">API health</h2>
+          <p><code>GET /</code> returns the server status.</p>
+        </div>
+        <button id="health-button" type="button">Check API</button>
+      </section>
+
+      <section class="panel" aria-labelledby="account-heading">
+        <h2 id="account-heading">Register or sign in</h2>
+        <form id="credentials-form">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="username" required>
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+          <div class="button-row">
+            <button type="submit" data-action="register">Register</button>
+            <button class="secondary" type="submit" data-action="login">Log in</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel" aria-labelledby="tokens-heading">
+        <h2 id="tokens-heading">Current session</h2>
+        <label for="access-token">Access token</label>
+        <input id="access-token" type="password" autocomplete="off" spellcheck="false">
+
+        <label for="refresh-token">Refresh token</label>
+        <input id="refresh-token" type="password" autocomplete="off" spellcheck="false">
+
+        <div class="button-row token-actions">
+          <button id="profile-button" type="button">Load profile</button>
+          <button id="refresh-button" class="secondary" type="button">Rotate tokens</button>
+          <button id="logout-button" class="danger" type="button">Log out</button>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="admin-heading">
+        <h2 id="admin-heading">Admin endpoint</h2>
+        <p><code>GET /api/admin/users</code> requires an admin access token. A regular user should receive <code>403</code>.</p>
+        <button id="users-button" type="button">List users</button>
+      </section>
+
+      <section class="panel response-panel" aria-labelledby="response-heading">
+        <div class="response-header">
+          <h2 id="response-heading">Response</h2>
+          <span id="response-status" role="status" aria-live="polite">Ready</span>
+        </div>
+        <pre id="response-output" aria-live="polite">Choose an action to make an API request.</pre>
+      </section>
+    </main>
+  </body>
+</html>

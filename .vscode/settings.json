@@ -16,7 +16,8 @@
     "README.md": true,
     "build-a-resource-monitor": true,
     "build-a-chat-app": true,
-    "build-jwt-protected-routes": false
+    "build-jwt-protected-routes": true,
+    "build-a-family-movie-watchlist-api": false
   },
   "chat.disableAIFeatures": false,
   "files.autoSave": "off",

@@ -15,6 +15,7 @@
   "scripts": {
     "start": "node ./node_modules/@freecodecamp/freecodecamp-os/.freeCodeCamp/tooling/server.js",
     "curriculum:extract": "node test/extract.mjs",
+    "curriculum:extract:family-movie": "npm run curriculum:extract -- --project build-a-family-movie-watchlist-api --section tests",
     "test": "node --test test/plugins.test.mjs && node test/run.mjs",
     "test:lint": "node test/run.mjs --check lint",
     "test:plugins": "node --test test/plugins.test.mjs",
